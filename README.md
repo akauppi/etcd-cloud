@@ -48,6 +48,17 @@ $ kubectl get pods
 ...something meaningful...
 ```
 
+For working with the cluster, `etcdctl` command line tool. Easiest (on Mac) is to install the whole `etcd` package:
+
+```
+$ brew install etcd
+$ ETCDCTL_API=3 etcdctl version
+etcdctl version: 3.3.8
+API version: 3.3
+```
+
+Note: `etcdctl` really is two tools in one. The "v2" and the "v3". You would do well in exporting the `ETCDCTL_API=3`, to guarantee you always deal with the more modern one. However, in this repo the env.var. is always explicitly mentioned.
+
 
 ## Alternatives
 
@@ -67,6 +78,20 @@ Etcd itself has this:
 |no|backups|
 
 ### etcd-operator (by CoreOS)
+
+TBD.
+
+### sgotti/k8s-persistent-etcd
+
+Sgotti's [repo](https://github.com/sgotti/k8s-persistent-etcd) (GitHub) is connected to the post he's done in Jul 2017 (see references).
+
+Somewhere, he writes that the `old` solution would be the better, so trying with it.
+
+
+
+
+
+
 
 
 

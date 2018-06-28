@@ -27,3 +27,19 @@ $ kubectl logs etcd2
 ...
 ```
 
+## Access
+
+We don't currently have access to the cluster over the public Internet:
+
+```
+$ kubectl get svc
+NAME          TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)             AGE
+etcd-client   ClusterIP   10.7.246.45    <none>        2379/TCP            10m
+etcd0         ClusterIP   10.7.254.135   <none>        2379/TCP,2380/TCP   10m
+etcd1         ClusterIP   10.7.249.33    <none>        2379/TCP,2380/TCP   10m
+etcd2         ClusterIP   10.7.244.94    <none>        2379/TCP,2380/TCP   10m
+kubernetes    ClusterIP   10.7.240.1     <none>        443/TCP             26m
+``` 
+
+<font color=red>TBD.</font>
+
