@@ -93,7 +93,8 @@ spec:
               --initial-cluster-token etcd-cluster-1 \
               --initial-cluster ${PEERS} \
               --initial-cluster-state new \
-              --data-dir /var/run/etcd/default.etcd
+              --data-dir /var/run/etcd/default.etcd \
+              --enable-v2 false
 ## We are using dynamic pv provisioning using the "standard" storage class so
 ## this resource can be directly deployed without changes to minikube (since
 ## minikube defines this class for its minikube hostpath provisioner). In
@@ -192,7 +193,8 @@ spec:
               --initial-cluster-token etcd-cluster-1 \
               --initial-cluster ${PEERS} \
               --initial-cluster-state new \
-              --data-dir /var/run/etcd/default.etcd
+              --data-dir /var/run/etcd/default.etcd \
+              --enable-v2 false
   volumeClaimTemplates:
   - metadata:
       name: data
@@ -287,7 +289,8 @@ spec:
               --initial-cluster-token etcd-cluster-1 \
               --initial-cluster ${PEERS} \
               --initial-cluster-state new \
-              --data-dir /var/run/etcd/default.etcd
+              --data-dir /var/run/etcd/default.etcd \
+              --enable-v2 false
   volumeClaimTemplates:
   - metadata:
       name: data

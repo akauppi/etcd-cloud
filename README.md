@@ -109,7 +109,7 @@ Service offerings from Google, AWS etc. Essentially any document data store woul
 
 - [Deploying a real persistent/durable etcd cluster inside kubernetes](https://sgotti.me/post/kubernetes-persistent-etcd/) (blog, Jul 2017)
 
-
+- Project Calico > Reference > [Setting up etcd Certificates for RBAC](https://docs.projectcalico.org/v3.1/reference/advanced/etcd-rbac/)
 
 
 
