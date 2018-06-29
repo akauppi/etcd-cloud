@@ -19,7 +19,7 @@ $ gcloud components install kubectl
 You can list the components by:
 
 ```
-$ gloud components list
+$ gcloud components list
 ```
 
 <font size="-1">Based on: https://cloud.google.com/sdk/docs/components </font>
@@ -60,12 +60,14 @@ We are not teaching Kubernetes, as such. It's fairly easy, once you get the conc
 Deployments can be done either from the command line (like how Google's quickstart shows), or - normally - from `.yaml` files.
 
 
-## Appendix
+## Command line
 
-Creating a cluster from command line:
+There may be scripts for doing this under the `sh/` folder.
+
+### Creating a cluster
 
 ```
-$ gcloud container clusters create cluster-123 --machine-type f1-micro --num-nodes 3 --disk-size 25
+$ gcloud container clusters create cluster-123 --machine-type f1-micro --num-nodes 3 --disk-size 20
 ...
 Creating cluster cluster-123...\                                                                                                                                 
 ```
@@ -78,13 +80,13 @@ NAME         LOCATION         MASTER_VERSION  MASTER_IP      MACHINE_TYPE  NODE_
 cluster-123  europe-north1-b  1.8.10-gke.0    35.228.161.25  f1-micro      1.8.10-gke.0  3          RUNNING
 ```
 
-Listing the current clusters:
+### Listing the current clusters
 
 ```
 $ gcloud container clusters list
 ```
 
-Removing a cluster:
+### Removing a cluster
 
 ```
 $ gcloud container clusters delete cluster-123
@@ -94,9 +96,21 @@ $ gcloud container clusters delete cluster-123
 |---|
 |NOTE: Remember to delete a cluster once you don't need it for testing/development purposes. Otherwise, it keeps billing.|
 
-<font size="-1">Based on: 
+## Cost estimate
+
+The setup is fairly low cost, around 1 eur/day or less (GKE Jun 2018).
+
+- three `f1-micro` instances
+- three 1GB persistent disks
+
+<font color=red>tbd. Should make a more detailed table here, and rough comparison with some cloud key/value store costs, e.g. Google Cloud Storage</font>
+
+
+## References 
 
 - https://cloud.google.com/kubernetes-engine/docs/how-to/creating-a-cluster
 - https://cloud.google.com/sdk/gcloud/reference/container/clusters/create 
-</font>
 
+- [Kubernetes: Moving to the Google Cloud](https://www.youtube.com/watch?v=4WP_uh1Ro4E) (Youtube, 18:28) by CoderJourney
+
+  Better than Google's own.

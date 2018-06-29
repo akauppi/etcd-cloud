@@ -1,11 +1,4 @@
 # Todo
 
-## Hack
+- [ ] Finish the "backup" section, on how one creates a new cluster from the snapshot.
 
-- [ ] Access restrictions
-- [ ] Public visibility
-
-## sgotti
-
-- [ ] Exposing on public Internet
-- [ ] Access restrictions

@@ -1,0 +1,44 @@
+# Backup
+
+Our aims:
+
+- automated, scheduled backups
+- manual restores, with clear instructions
+- target: Google Cloud Storage
+
+No automated restores because every restore involves likely loss of data.
+
+## Alternative 1: etcd-backup-operator
+
+
+This seems to come with `etcd-operator`, and is likely interconnected with it. It's provided under the "examples" folder, which (to me) implies that it's not really ready, but something... in the works.
+
+Also:
+
+>Note that currently the `etcd-restore-operator` only supports restoring from backups saved on S3.
+
+This is game over for me, since I wish to use Google baskets for the backups. 
+
+
+## Alternative 2: ???
+
+>To recover from disastrous failure, etcd v3 provides snapshot and restore facilities to recreate the cluster without v3 key data loss. 
+
+What does that mean?  What should the operators do?
+
+
+
+I did not find information on how to do a manual backup of etcd v3 cluster's data. 
+
+See [Is there an "admin" page for etcd v3](https://groups.google.com/forum/#!topic/etcd-dev/CM6rfOlL3fU) (Google Groups) for background.
+
+
+ 
+
+## References
+
+- [etcd backup operator](https://coreos.com/operators/etcd/docs/latest/user/walkthrough/backup-operator.html)
+- [etcd restore operator](https://coreos.com/operators/etcd/docs/latest/user/walkthrough/restore-operator.html)
+
+- [Disaster recovery](https://coreos.com/etcd/docs/latest/op-guide/recovery.html)
+

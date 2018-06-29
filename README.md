@@ -87,18 +87,18 @@ Sgotti's [repo](https://github.com/sgotti/k8s-persistent-etcd) (GitHub) is conne
 
 Somewhere, he writes that the `old` solution would be the better, so trying with it.
 
-### heneise/k8s-etcd-cluster
-
-https://github.com/heneise/k8s-etcd-cluster
-
-TBD.
-
 
 ## Other key/value alternatives
 
 There are other fish in the InterNet than etcd v3. If we fail to get the right feeling from running etcd, should consider these:
 
 ### Consul
+
+Would work for our needs, but the reasons not to are nicely described in [heneise](https://github.com/heneise/k8s-etcd-cluster)'s README [^2].
+
+>The reason we picked etcd in this context is that... k8s runs an etcd cluster. Using anything else would add one technology thus complexity to the design. Arguably Consul offers more options than etcd and especially an implementation of a DNS for units of service. However this a toolbox also offered by k8s, hence functionally speaking k8s + etcd will be similar to a separate Consul system.
+
+[^2]: heneise's setup is not on the above list since it's v2 only.
 
 ### Cloud key/value stores
 
